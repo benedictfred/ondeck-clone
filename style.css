@@ -245,7 +245,6 @@ ul li {
     display: flex;
     padding: 0;
     margin: -1rem;
-    /* background-color: yellow; */
   }
   .head {
     display: flex;
@@ -266,7 +265,6 @@ ul li {
     flex-wrap: wrap;
     margin-left: 1rem;
     width: 20rem;
-    /* background-color: blue; */
   }
   .icon__img {
     width: 9rem;
@@ -279,8 +277,84 @@ ul li {
   }
 }
 
-/* @media (max-width: 640px) {
-  .main {
-    max-width: 475px;
+@media (min-width: 769px) and (max-width: 900px) {
+  .menu {
+    background-color: #fff;
+    position: fixed;
+    top: 2rem;
+    right: 0;
+    height: 60vh;
+    width: 20rem;
+    display: none;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
-} */
+
+  .active {
+    display: flex;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 5rem;
+    width: 20rem;
+  }
+  ul li {
+    margin-top: 2rem;
+    padding-right: 10rem;
+    width: 100%;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+  }
+  .signin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 2rem;
+  }
+  .close__btn {
+    display: flex;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    width: 2rem;
+  }
+  .menu__bar {
+    display: flex;
+    position: relative;
+    right: -9rem;
+  }
+  .main__logo {
+    display: flex;
+    position: relative;
+    left: -9rem;
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+  }
+  .icon {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    right: 10rem;
+    width: 50rem;
+  }
+  .icon__img {
+    width: 10rem;
+    height: 4rem;
+  }
+}
